@@ -2,7 +2,9 @@ The initial code for SRGAN was forked from [Aladdin Persson's Machine Learning c
 
 # Training details
 
-Make sure the RealVSR training dataset is located at `datasets/RealVSR/train/`.
+Make sure the RealVSR training dataset is located at `datasets/RealVSR/train/`. The dataset class assumes that 
+the training dataset already has GT images located in `datasets/RealVSR/train/GT` and low quality images 
+located in `datasets/RealVSR/train/LQ`. The format of the dataset should mimic RealVSR.
 
 Set `LOAD_MODEL` to `False` in `config.py`. Set the number of epochs to 150 and the learning rate to 1e-4.
 Within `train.py`, remove the discriminator from the training process by commenting it out. Additionally,
